@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Matias</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="https://media.licdn.com/dms/image/D5603AQGqkKEuZyrVzA/profile-displayphoto-shrink_200_200/0/1721407572711?e=1726704000&v=beta&t=RxDNIQ0afHz82C7cGm_qWxv5BZetOOqj8roJBEDTnZo" alt="David Matias" >
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="David Matias">David Matias</h1>
+
+          <p class="title">Web Developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Alenquer, Lisbon, Portugal</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/davidmatias95/" target="_blank" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+        </ul>
+
+      </nav>
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm an OutSystems Developer and Full Stack Developer from Alenquer, Portugal, specializing in web development and system integration.
+            I excel at transforming complex requirements into streamlined, efficient, and user-friendly applications.
+          </p>
+
+          <p>
+            My job is to develop robust and scalable web applications that are not only functional and efficient but also intuitive and visually appealing.
+            I add a personal touch to each project, ensuring it stands out and is easy to use. My goal is to convey your message and identity most effectively and creatively as possible.
+
+          </p>
+          <p>I have developed solutions for various companies, leveraging a range of technologies to meet their unique needs.</p>
+        </section>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Technology's</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.outsystems.com/-/media/themes/outsystems/website/site-theme/imgs/logo.svg?updated=20211217193441" alt="Outsystems">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sql_data_base_with_logo.png/800px-Sql_data_base_with_logo.png" alt="SQL">
+              </a>
+            </li>
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://laravel.com/img/logomark.min.svg" alt="Laravel">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="https://www.php.net/images/logos/php-logo.svg" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title"> Master's Degree in Web Technologies and Systems Engineering</h4>
+
+              <span>2020 – 2022</span>
+
+              <p class="timeline-text">
+                ISLA - Instituto Superior de Gestão e Administração de Santarém, Portugal
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Degree in Computing</h4>
+
+              <span>2017 – 2020</span>
+
+              <p class="timeline-text">
+                Escola Superior de Gestão e Tecnologia de Santarém, Instituto Politécnico Santarém, Portugal
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Higher Professional Technician in Information Systems Technologies and Programming</h4>
+
+              <span>2015 – 2017</span>
+
+              <p class="timeline-text">
+                Escola Superior de Gestão e Tecnologia de Santarém, Instituto Politécnico Santarém, Portugal
+              </p>
+
+            </li>
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">IT Systems Management and Programming Technical Professional</h4>
+
+              <span>2015 – 2017</span>
+
+              <p class="timeline-text">
+                Escola Secundária Damião de Goes, Lisboa, Portugal
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">OutSystems Developer</h4>
+
+              <span>2021 — Present</span>
+
+              <p class="timeline-text">
+                Do It Lean, Lisboa, Portugal
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Backend Developer</h4>
+
+              <span>2020 — 2021</span>
+
+              <p class="timeline-text">
+                Digital Manager Guru, Santarém, Portugal
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Full Stack Developer</h4>
+
+              <span>2019 — 2020</span>
+
+              <p class="timeline-text">
+                Capensis, Lda, Alenquer, Portugal
+              </p>
+
+            </li>
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Full Stack Developer</h4>
+
+              <span>2016 — 2017</span>
+
+              <p class="timeline-text">
+                Paulo A. R. Nunes, Lda, Lisboa, Portugal
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
