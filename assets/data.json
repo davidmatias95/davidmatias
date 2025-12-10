@@ -33,6 +33,11 @@
       "name": "PHP",
       "logo": "https://www.php.net/images/logos/php-logo.svg",
       "url": "#"
+    },
+    {
+      "name": "JavaScript",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+      "url": "#"
     }
   ],
   "education": [

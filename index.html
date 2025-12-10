@@ -211,69 +211,6 @@
           <h2 class="h2 article-title">Resume</h2>
         </header>
 
-        <section class="timeline" id="education-section">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list" id="education-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"> Master's Degree in Web Technologies and Systems Engineering</h4>
-
-              <span>2020 – 2022</span>
-
-              <p class="timeline-text">
-                ISLA - Instituto Superior de Gestão e Administração de Santarém, Portugal
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Degree in Computing</h4>
-
-              <span>2017 – 2020</span>
-
-              <p class="timeline-text">
-                Escola Superior de Gestão e Tecnologia de Santarém, Instituto Politécnico Santarém, Portugal
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Higher Professional Technician in Information Systems Technologies and Programming</h4>
-
-              <span>2015 – 2017</span>
-
-              <p class="timeline-text">
-                Escola Superior de Gestão e Tecnologia de Santarém, Instituto Politécnico Santarém, Portugal
-              </p>
-
-            </li>
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">IT Systems Management and Programming Technical Professional</h4>
-
-              <span>2015 – 2017</span>
-
-              <p class="timeline-text">
-                Escola Secundária Damião de Goes, Lisboa, Portugal
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
         <section class="timeline" id="experience-section">
 
           <div class="title-wrapper">
@@ -329,6 +266,69 @@
 
               <p class="timeline-text">
                 Paulo A. R. Nunes, Lda, Lisboa, Portugal
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline" id="education-section">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list" id="education-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title"> Master's Degree in Web Technologies and Systems Engineering</h4>
+
+              <span>2020 – 2022</span>
+
+              <p class="timeline-text">
+                ISLA - Instituto Superior de Gestão e Administração de Santarém, Portugal
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Degree in Computing</h4>
+
+              <span>2017 – 2020</span>
+
+              <p class="timeline-text">
+                Escola Superior de Gestão e Tecnologia de Santarém, Instituto Politécnico Santarém, Portugal
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Higher Professional Technician in Information Systems Technologies and Programming</h4>
+
+              <span>2015 – 2017</span>
+
+              <p class="timeline-text">
+                Escola Superior de Gestão e Tecnologia de Santarém, Instituto Politécnico Santarém, Portugal
+              </p>
+
+            </li>
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">IT Systems Management and Programming Technical Professional</h4>
+
+              <span>2015 – 2017</span>
+
+              <p class="timeline-text">
+                Escola Secundária Damião de Goes, Lisboa, Portugal
               </p>
 
             </li>
@@ -546,11 +546,21 @@
         data.education.forEach(edu => {
           const li = document.createElement('li');
           li.className = 'timeline-item';
-          li.innerHTML = `
+          let html = `
             <h4 class="h4 timeline-item-title">${edu.degree}</h4>
             <span>${edu.period}</span>
             <p class="timeline-text">${edu.institution}</p>
           `;
+          if (edu.level) {
+            html += `<p class="timeline-text"><strong>Level:</strong> ${edu.level}</p>`;
+          }
+          if (edu.curriculumUnits && edu.curriculumUnits.length > 0) {
+            html += `<p class="timeline-text"><strong>Curriculum Units:</strong> ${edu.curriculumUnits.slice(0, 3).join(', ')}...</p>`;
+          }
+          if (edu.professionalTest) {
+            html += `<p class="timeline-text"><strong>Professional Test:</strong> ${edu.professionalTest}</p>`;
+          }
+          li.innerHTML = html;
           educationList.appendChild(li);
         });
 
@@ -560,11 +570,24 @@
         data.experience.forEach(exp => {
           const li = document.createElement('li');
           li.className = 'timeline-item';
-          li.innerHTML = `
+          let html = `
             <h4 class="h4 timeline-item-title">${exp.position}</h4>
             <span>${exp.period}</span>
-            <p class="timeline-text">${exp.company}</p>
+            <p class="timeline-text"><strong>${exp.company}</strong></p>
           `;
+          if (exp.description) {
+            html += `<p class="timeline-text">${exp.description}</p>`;
+          }
+          if (exp.technologies) {
+            html += `<p class="timeline-text"><strong>Technologies:</strong> ${exp.technologies}</p>`;
+          }
+          if (exp.projects && exp.projects.length > 0) {
+            html += `<p class="timeline-text"><strong>Key Projects:</strong> ${exp.projects.slice(0, 2).join(', ')}</p>`;
+          }
+          if (exp.certifications && exp.certifications.length > 0) {
+            html += `<p class="timeline-text"><strong>Certifications:</strong> ${exp.certifications.slice(0, 2).join(', ')}</p>`;
+          }
+          li.innerHTML = html;
           experienceList.appendChild(li);
         });
 
@@ -596,6 +619,20 @@
           li.innerHTML = `<p class="timeline-text">${skill}</p>`;
           digitalList.appendChild(li);
         });
+
+        // Add Communication & Organizational Skills as separate items
+        if (data.skills.communication) {
+          const commLi = document.createElement('li');
+          commLi.className = 'timeline-item';
+          commLi.innerHTML = `<p class="timeline-text"><strong>Communication:</strong> ${data.skills.communication}</p>`;
+          digitalList.appendChild(commLi);
+        }
+        if (data.skills.organizational) {
+          const orgLi = document.createElement('li');
+          orgLi.className = 'timeline-item';
+          orgLi.innerHTML = `<p class="timeline-text"><strong>Organizational:</strong> ${data.skills.organizational}</p>`;
+          digitalList.appendChild(orgLi);
+        }
 
         // Programming Languages
         const programmingList = document.getElementById('programming-list');
@@ -654,8 +691,15 @@
           conferencesList.appendChild(li);
         });
 
-        // Hobbies
-        document.getElementById('hobbies-text').textContent = data.additional.hobbies;
+        // Hobbies - include driving license and event organization
+        let hobbiesText = data.additional.hobbies || '';
+        if (data.additional.drivingLicense) {
+          hobbiesText += `<br><strong>Driving License:</strong> ${data.additional.drivingLicense}`;
+        }
+        if (data.additional.eventOrganization && data.additional.eventOrganization.paulaCulturalCenter) {
+          hobbiesText += `<br><strong>Event Organization:</strong> ${data.additional.eventOrganization.paulaCulturalCenter.slice(0, 2).join(', ')}...`;
+        }
+        document.getElementById('hobbies-text').innerHTML = hobbiesText;
 
         console.log('Dados carregados com sucesso:', data);
       })

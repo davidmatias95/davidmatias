@@ -735,8 +735,8 @@ main {
 .clients-list {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  gap: 15px;
+  align-items: center;
+  gap: 30px;
   margin: 0 -15px;
   padding: 25px;
   padding-bottom: 25px;
@@ -748,19 +748,19 @@ main {
 }
 
 .clients-item {
-  min-width: 50%;
+  min-width: auto;
   scroll-snap-align: start;
   align-content: center;
 }
 
 .clients-item img {
-  width: 50%;
-  max-height: 50px;
-  filter: grayscale(1);
+  width: 120px;
+  max-height: 80px;
+  object-fit: contain;
   transition: var(--transition-1);
 }
 
-.clients-item img:hover { filter: grayscale(0); }
+.clients-item img:hover { filter: none; }
 
 
 
