@@ -39,16 +39,16 @@
 
     <aside class="sidebar" data-sidebar>
 
-      <div class="sidebar-info">
+      <div class="sidebar-info" id="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="assets/images/avatar.jpg" alt="David Matias" >
+          <img id="avatar" src="assets/images/avatar.jpg" alt="David Matias" >
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="David Matias">David Matias</h1>
+          <h1 class="name" id="name" title="David Matias">David Matias</h1>
 
-          <p class="title">Web Developer</p>
+          <p class="title" id="title">Web Developer</p>
         </div>
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
@@ -73,7 +73,7 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>Alenquer, Lisbon, Portugal</address>
+              <address id="location">Alenquer, Lisbon, Portugal</address>
             </div>
 
           </li>
@@ -115,12 +115,21 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link>About</button>
           </li>
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Resume</button>
           </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Skills</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Additional</button>
+          </li>
+
         </ul>
 
       </nav>
@@ -128,13 +137,13 @@
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
+      <article class="about active" data-page="about" id="about-article">
 
         <header>
           <h2 class="h2 article-title">About me</h2>
         </header>
 
-        <section class="about-text">
+        <section class="about-text" id="about-content">
           <p>
             I'm an OutSystems Developer and Full Stack Developer from Alenquer, Portugal, specializing in web development and system integration.
             I excel at transforming complex requirements into streamlined, efficient, and user-friendly applications.
@@ -157,7 +166,7 @@
 
           <h3 class="h3 clients-title">Technology's</h3>
 
-          <ul class="clients-list has-scrollbar">
+          <ul class="clients-list has-scrollbar" id="technologies-list">
 
             <li class="clients-item">
               <a href="#">
@@ -196,13 +205,13 @@
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
+      <article class="resume" data-page="resume" id="resume-article">
 
         <header>
           <h2 class="h2 article-title">Resume</h2>
         </header>
 
-        <section class="timeline">
+        <section class="timeline" id="education-section">
 
           <div class="title-wrapper">
             <div class="icon-box">
@@ -212,7 +221,7 @@
             <h3 class="h3">Education</h3>
           </div>
 
-          <ol class="timeline-list">
+          <ol class="timeline-list" id="education-list">
 
             <li class="timeline-item">
 
@@ -265,7 +274,7 @@
 
         </section>
 
-        <section class="timeline">
+        <section class="timeline" id="experience-section">
 
           <div class="title-wrapper">
             <div class="icon-box">
@@ -275,7 +284,7 @@
             <h3 class="h3">Experience</h3>
           </div>
 
-          <ol class="timeline-list">
+          <ol class="timeline-list" id="experience-list">
 
             <li class="timeline-item">
 
@@ -330,6 +339,160 @@
 
       </article>
 
+      <!--
+        - #SKILLS
+      -->
+
+      <article class="skills" data-page="skills" id="skills-article">
+
+        <header>
+          <h2 class="h2 article-title">Skills</h2>
+        </header>
+
+        <section class="timeline" id="languages-section">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="language-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Languages</h3>
+          </div>
+
+          <ol class="timeline-list" id="languages-list">
+
+          </ol>
+
+        </section>
+
+        <section class="timeline" id="digital-section">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="settings-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Digital Skills</h3>
+          </div>
+
+          <ol class="timeline-list" id="digital-list">
+
+          </ol>
+
+        </section>
+
+        <section class="timeline" id="programming-section">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="code-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Programming Languages</h3>
+          </div>
+
+          <ol class="timeline-list" id="programming-list">
+
+          </ol>
+
+        </section>
+
+        <section class="timeline" id="databases-section">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="server-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Databases</h3>
+          </div>
+
+          <ol class="timeline-list" id="databases-list">
+
+          </ol>
+
+        </section>
+
+        <section class="timeline" id="other-section">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="star-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Other Skills</h3>
+          </div>
+
+          <ol class="timeline-list" id="other-list">
+
+          </ol>
+
+        </section>
+
+      </article>
+
+      <!--
+        - #ADDITIONAL
+      -->
+
+      <article class="additional" data-page="additional" id="additional-article">
+
+        <header>
+          <h2 class="h2 article-title">Additional</h2>
+        </header>
+
+        <section class="timeline" id="projects-section">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Projects</h3>
+          </div>
+
+          <ol class="timeline-list" id="projects-list">
+
+          </ol>
+
+        </section>
+
+        <section class="timeline" id="conferences-section">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="mic-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Conferences</h3>
+          </div>
+
+          <ol class="timeline-list" id="conferences-list">
+
+          </ol>
+
+        </section>
+
+        <section class="timeline" id="hobbies-section">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="heart-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Hobbies & Events</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <p class="timeline-text" id="hobbies-text"></p>
+            </li>
+          </ol>
+
+        </section>
+
+      </article>
+
     </div>
 
   </main>
@@ -339,9 +502,6 @@
 
 
 
-  <!--
-    - custom js link
-  -->
   <script src="./assets/js/script.js"></script>
 
   <!--
@@ -349,6 +509,158 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    // Carrega os dados do JSON
+    fetch('./assets/data.json')
+      .then(response => response.json())
+      .then(data => {
+        // Atualiza informações pessoais
+        document.getElementById('avatar').src = data.personalInfo.avatar;
+        document.getElementById('name').textContent = data.personalInfo.name;
+        document.getElementById('title').textContent = data.personalInfo.title;
+        document.getElementById('location').textContent = data.personalInfo.location;
+
+        // Atualiza "About" - paragrafos
+        const aboutContent = document.getElementById('about-content');
+        aboutContent.innerHTML = '';
+        data.about.forEach(text => {
+          const p = document.createElement('p');
+          p.textContent = text;
+          aboutContent.appendChild(p);
+        });
+
+        // Atualiza tecnologias
+        const technologiesList = document.getElementById('technologies-list');
+        technologiesList.innerHTML = '';
+        data.technologies.forEach(tech => {
+          const li = document.createElement('li');
+          li.className = 'clients-item';
+          li.innerHTML = `<a href="${tech.url}"><img src="${tech.logo}" alt="${tech.name}"></a>`;
+          technologiesList.appendChild(li);
+        });
+
+        // Atualiza Education
+        const educationList = document.getElementById('education-list');
+        educationList.innerHTML = '';
+        data.education.forEach(edu => {
+          const li = document.createElement('li');
+          li.className = 'timeline-item';
+          li.innerHTML = `
+            <h4 class="h4 timeline-item-title">${edu.degree}</h4>
+            <span>${edu.period}</span>
+            <p class="timeline-text">${edu.institution}</p>
+          `;
+          educationList.appendChild(li);
+        });
+
+        // Atualiza Experience
+        const experienceList = document.getElementById('experience-list');
+        experienceList.innerHTML = '';
+        data.experience.forEach(exp => {
+          const li = document.createElement('li');
+          li.className = 'timeline-item';
+          li.innerHTML = `
+            <h4 class="h4 timeline-item-title">${exp.position}</h4>
+            <span>${exp.period}</span>
+            <p class="timeline-text">${exp.company}</p>
+          `;
+          experienceList.appendChild(li);
+        });
+
+        // Atualiza Skills
+        const languagesList = document.getElementById('languages-list');
+        languagesList.innerHTML = '';
+        languagesList.innerHTML += `
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Mother Tongue</h4>
+            <p class="timeline-text">${data.skills.languages.motherTongue}</p>
+          </li>
+        `;
+        data.skills.languages.foreign.forEach(lang => {
+          const li = document.createElement('li');
+          li.className = 'timeline-item';
+          li.innerHTML = `
+            <h4 class="h4 timeline-item-title">${lang.language}</h4>
+            <p class="timeline-text">Listening: ${lang.listening} | Reading: ${lang.reading} | Speaking: ${lang.speaking} | Writing: ${lang.writing}</p>
+          `;
+          languagesList.appendChild(li);
+        });
+
+        // Digital Skills
+        const digitalList = document.getElementById('digital-list');
+        digitalList.innerHTML = '';
+        data.skills.digital.forEach(skill => {
+          const li = document.createElement('li');
+          li.className = 'timeline-item';
+          li.innerHTML = `<p class="timeline-text">${skill}</p>`;
+          digitalList.appendChild(li);
+        });
+
+        // Programming Languages
+        const programmingList = document.getElementById('programming-list');
+        programmingList.innerHTML = '';
+        data.skills.programming.forEach(lang => {
+          const li = document.createElement('li');
+          li.className = 'timeline-item';
+          li.innerHTML = `<p class="timeline-text">${lang}</p>`;
+          programmingList.appendChild(li);
+        });
+
+        // Databases
+        const databasesList = document.getElementById('databases-list');
+        databasesList.innerHTML = '';
+        data.skills.databases.forEach(db => {
+          const li = document.createElement('li');
+          li.className = 'timeline-item';
+          li.innerHTML = `<p class="timeline-text">${db}</p>`;
+          databasesList.appendChild(li);
+        });
+
+        // Other Skills
+        const otherList = document.getElementById('other-list');
+        otherList.innerHTML = '';
+        data.skills.other.forEach(skill => {
+          const li = document.createElement('li');
+          li.className = 'timeline-item';
+          li.innerHTML = `<p class="timeline-text">${skill}</p>`;
+          otherList.appendChild(li);
+        });
+
+        // Atualiza Additional - Projects
+        const projectsList = document.getElementById('projects-list');
+        projectsList.innerHTML = '';
+        data.additional.projects.forEach(project => {
+          const li = document.createElement('li');
+          li.className = 'timeline-item';
+          li.innerHTML = `
+            <h4 class="h4 timeline-item-title">${project.name}</h4>
+            <p class="timeline-text">${project.description}</p>
+          `;
+          projectsList.appendChild(li);
+        });
+
+        // Conferences
+        const conferencesList = document.getElementById('conferences-list');
+        conferencesList.innerHTML = '';
+        data.additional.conferences.forEach(conf => {
+          const li = document.createElement('li');
+          li.className = 'timeline-item';
+          li.innerHTML = `
+            <h4 class="h4 timeline-item-title">${conf.title}</h4>
+            <span>${conf.date}</span>
+            <p class="timeline-text">${conf.organization || conf.details || ''}</p>
+          `;
+          conferencesList.appendChild(li);
+        });
+
+        // Hobbies
+        document.getElementById('hobbies-text').textContent = data.additional.hobbies;
+
+        console.log('Dados carregados com sucesso:', data);
+      })
+      .catch(error => console.error('Erro ao carregar o JSON:', error));
+  </script>
 
 </body>
 

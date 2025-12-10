@@ -1,0 +1,330 @@
+{
+  "personalInfo": {
+    "name": "David Matias",
+    "title": "OutSystems Developer",
+    "avatar": "/assets/images/avatar.jpg",
+    "location": "Alenquer, Lisbon, Portugal"
+  },
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/davidmatias95/"
+  },
+  "about": [
+    "I'm an OutSystems Developer and Full Stack Developer from Alenquer, Portugal, specializing in web development and system integration. I excel at transforming complex requirements into streamlined, efficient, and user-friendly applications.",
+    "My job is to develop robust and scalable web applications that are not only functional and efficient but also intuitive and visually appealing. I add a personal touch to each project, ensuring it stands out and is easy to use. My goal is to convey your message and identity most effectively and creatively as possible.",
+    "I have developed solutions for various companies, leveraging a range of technologies to meet their unique needs."
+  ],
+  "technologies": [
+    {
+      "name": "OutSystems",
+      "logo": "https://www.outsystems.com/-/media/themes/outsystems/website/site-theme/imgs/logo.svg?updated=20211217193441",
+      "url": "#"
+    },
+    {
+      "name": "SQL",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sql_data_base_with_logo.png/800px-Sql_data_base_with_logo.png",
+      "url": "#"
+    },
+    {
+      "name": "Laravel",
+      "logo": "https://laravel.com/img/logomark.min.svg",
+      "url": "#"
+    },
+    {
+      "name": "PHP",
+      "logo": "https://www.php.net/images/logos/php-logo.svg",
+      "url": "#"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master's Degree in Web Systems and Technology Engineering",
+      "period": "2020 – 2022",
+      "institution": "ISLA - Instituto Superior de Gestão e Administração de Santarém, Portugal",
+      "level": "Level 7 QRQ",
+      "curriculumUnits": [
+        "Interaction Design",
+        "Data Knowledge Extraction",
+        "Information Systems Planning and Development",
+        "Web Programming",
+        "Computer Security",
+        "Cloud Computing",
+        "Mobile Application Developments",
+        "Artificial Intelligence",
+        "Research Methodologies",
+        "Advanced Web Programming"
+      ]
+    },
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "period": "2017 – 2020",
+      "institution": "School of Management and Technology of Santarém, Polytechnic Institute Santarém, Portugal",
+      "level": "Level 6 QRQ",
+      "curriculumUnits": [
+        "Calculation",
+        "Business Accounting",
+        "Finance",
+        "Discrete Mathematics",
+        "Law and Ethics of the Information Society",
+        "Marketing for Technologies",
+        "Electronic Business",
+        "Odds and Statistics",
+        "Analysis and Design of Information Systems",
+        "Computer Architecture and Operating Systems",
+        "Databases I",
+        "Databases II",
+        "Fundamentals of Programming",
+        "Programming Languages",
+        "Object-Oriented Programming",
+        "Computer Networks",
+        "Network Services",
+        "Multimedia Systems",
+        "Web Systems",
+        "Systems and Network Administration and Security",
+        "Open Source Applications",
+        "Multimedia Applications",
+        "Internet Application Development",
+        "Mobile Development",
+        "Project Management",
+        "Systems Integration I",
+        "Systems Integration II",
+        "Applied Design",
+        "Management Information Systems",
+        "Internet Technologies"
+      ]
+    },
+    {
+      "degree": "Developing OutSystems Web Apps Boot Camp",
+      "period": "April 15-18, 2019",
+      "institution": "Do It Lean - School of Management and Technology of Santarém, Polytechnic Institute Santarém, Portugal"
+    },
+    {
+      "degree": "Senior Professional Technician in Information Systems Technologies and Programming",
+      "period": "2015 – 2017",
+      "institution": "School of Management and Technology of Santarém, Polytechnic Institute Santarém, Portugal",
+      "level": "Level 5 QRQ",
+      "curriculumUnits": [
+        "English Language",
+        "Portuguese Language",
+        "Quantitative Methods",
+        "Hardware Architecture and Operating Systems",
+        "Database I",
+        "Multimedia Product Development",
+        "Software Engineering",
+        "Introduction to Programming",
+        "Object-Oriented Programming",
+        "Communication Networks and Services",
+        "Network and System Security",
+        "Information Systems",
+        "Database II",
+        "Work-Based Training (750 hours)",
+        "System Integration",
+        "Mobile Programming",
+        "WEB Programming",
+        "Information Systems Technologies and Programming Project",
+        "Network and System Security",
+        "Business Information Systems"
+      ]
+    },
+    {
+      "degree": "Computer Systems Management and Programming Technical Professional",
+      "period": "2012 – 2015",
+      "institution": "Damião de Goes Secondary School, Lisboa, Portugal",
+      "level": "Level 4 QRQ",
+      "curriculumUnits": [
+        "Integration Area",
+        "Physical Education",
+        "Physics and Chemistry",
+        "English Language",
+        "Mathematics",
+        "Portuguese",
+        "Information and Communication Technologies",
+        "Computer Architecture",
+        "Work-Based Training (420 hours)",
+        "Programming and Information Systems",
+        "Communication Networks",
+        "Operating Systems"
+      ],
+      "professionalTest": "WEB Application 'CCCR-Alenquer' - Application developed to help the management of the Alenquer Rolling Cart Municipality Championship"
+    }
+  ],
+  "experience": [
+    {
+      "position": "OutSystems Developer",
+      "period": "01/09/2021 – Present",
+      "company": "Valantic LCS (former Do iT Lean)",
+      "address": "Rua General Ferreira Martins 10, 9B 1495-137 Algés Lisboa (Portugal)",
+      "website": "https://valantic.com/en/low-code/",
+      "description": "Development of enterprise applications using OutSystems platform.",
+      "projects": [
+        "Development of an idea management app to handle proposals",
+        "Migration of a Trading Game Cards application from traditional to reactive",
+        "Maintenance of a merchandising distribution management application",
+        "Development of an internal project for project management"
+      ],
+      "certifications": [
+        "Associate Reactive Developer (O11)",
+        "Associate Traditional Web Developer (O11)",
+        "Associate Developer (ODC)",
+        "Architecture Specialist (O11)"
+      ],
+      "technologies": "OutSystems, Jira, C#, JavaScript, SQL, CSS, REST API, JSON",
+      "sector": "Computer Programming Activities"
+    },
+    {
+      "position": "Backend Developer",
+      "period": "01/08/2020 – 01/08/2021",
+      "company": "Margem Inquestionável, S.A (Digital Manager Guru)",
+      "address": "Largo do Infante Santo 2005-246 Santarém (Portugal)",
+      "website": "https://digitalmanager.guru/",
+      "description": "Responsible for the integration and development of APIs with external and internal applications in a startup environment.",
+      "technologies": "Laravel, MySQL, JSON",
+      "sector": "Computer Programming Activities"
+    },
+    {
+      "position": "Full Stack Developer",
+      "period": "01/10/2019 – 30/06/2020",
+      "company": "Capensis, Lda",
+      "address": "Estrada Nacional 1, km 33, Edifício Ativo, Sala 108 - Casal Machado - Alenquer, 2580-364 Lisboa (Portugal)",
+      "website": "https://capensis.pt/",
+      "description": "Professional Internship through IEFP (9 months). Planning, implementation, configuration, maintenance and parameterization of business information systems.",
+      "activities": [
+        "Full Stack Development",
+        "Information Technology Administration"
+      ],
+      "software": "Sage 50c/Retail, Filosoft, Zonesoft, Microsoft Office 365",
+      "technologies": "HTML5, CSS3, PHP, JavaScript, jQuery, MySQL, Bootstrap, SQL Server",
+      "sector": "Computer Consulting"
+    },
+    {
+      "position": "Full Stack Developer",
+      "period": "05/06/2019 – 09/08/2019",
+      "company": "Capensis, Lda",
+      "address": "Estrada Nacional 1, km 33, Edifício Ativo, Sala 108 - Casal Machado - Alenquer, 2580-364 Lisboa (Portugal)",
+      "website": "https://capensis.pt/",
+      "description": "Training in Work Context (760 hours) of the TeSP Course in Information Systems Technologies and Programming. Development of an Information System to support administrative and management activities.",
+      "technologies": "HTML5, CSS3, PHP, JavaScript, jQuery, MySQL, Bootstrap",
+      "sector": "Computer Consulting"
+    },
+    {
+      "position": "Full Stack Developer",
+      "period": "20/02/2017 – 14/07/2017",
+      "company": "Paulo A. R. Nunes, Lda",
+      "address": "Rua do Bairro Novo - Porto da Luz - Alenquer, 2580-383 Lisboa (Portugal)",
+      "description": "Training in Work Context (760 hours) of the TeSP Course in Information Systems Technologies and Programming. Development of an Information System to support administrative and management activities of the company's electrical installations business.",
+      "technologies": "HTML5, CSS3, PHP, JavaScript, jQuery, MySQL, Bootstrap",
+      "sector": "Electrical Installations"
+    },
+    {
+      "position": "Full Stack Developer (Summer Job)",
+      "period": "10/07/2016 – 13/09/2016",
+      "company": "Paulo A. R. Nunes, Lda",
+      "address": "Rua do Bairro Novo - Porto da Luz - Alenquer, 2580-383 Lisboa (Portugal)",
+      "description": "Development of a web application for stock management, recording the entry and exit of materials used on site.",
+      "technologies": "HTML, CSS, PHP, JavaScript, MySQL, Bootstrap",
+      "sector": "Electrical Installations"
+    },
+    {
+      "position": "Full Stack Developer (Internship)",
+      "period": "16/03/2015 – 30/06/2015",
+      "company": "Somaquifer, Lda",
+      "address": "Loteamento Industrial Outeirinho Casal Fontinha, Lote 2, 2005-544 Santarém (Portugal)",
+      "website": "http://somaquifer.pt/",
+      "description": "Work-Based Training (420 hours) of the Technical Professional Course in Management and Programming of Computer Systems. Developed the main website of the company SOMAQUIFER.",
+      "technologies": "HTML, CSS, PHP, MySQL",
+      "sector": "Trade of Industrial Machinery and Tools"
+    }
+  ],
+  "skills": {
+    "languages": {
+      "motherTongue": "Portuguese",
+      "foreign": [
+        {
+          "language": "English",
+          "listening": "B1",
+          "reading": "B1",
+          "oralInteraction": "B1",
+          "speaking": "B1",
+          "writing": "A2"
+        }
+      ]
+    },
+    "communication": "Good communication skills and team spirit acquired through various events as an element of the organization of the Cultural Center of Paúla and the Municipal Championship of Rolling Carts of Alenquer",
+    "organizational": "Organizational capacity acquired through participation in the Serra de Ota Bearing Car Grand Prix editions and Alenquer Municipal Bearing Car Championship",
+    "digital": [
+      "Knowledge in Software Engineering",
+      "Knowledge of software development architectures and patterns for Web and mobile devices",
+      "Mastery of languages and Frameworks for Web application development (HTML5, CSS, JavaScript, Bootstrap, PHP)",
+      "Good domain in Database specification and Database Management Systems",
+      "Knowledge in version control and collaborative/distributed creation"
+    ],
+    "programming": [
+      "PHP",
+      "JAVA",
+      "JavaScript",
+      "C#",
+      "VB",
+      "PL/SQL"
+    ],
+    "databases": [
+      "SQL Server",
+      "MySQL",
+      "SQLite"
+    ],
+    "other": [
+      "HTML5",
+      "jQuery",
+      "SQL",
+      "CSS3",
+      "JSON",
+      "XML"
+    ]
+  },
+  "additional": {
+    "drivingLicense": "B1, B",
+    "projects": [
+      {
+        "name": "Loucos do Asfalto",
+        "description": "Family team of rolling carts (since 2009)"
+      },
+      {
+        "name": "CRTempos",
+        "description": "Timing System - Web application (2018)"
+      },
+      {
+        "name": "CCCR-Alenquer",
+        "description": "Management System of the Rolling Carts of Alenquer Municipal Championship - Web and Mobile Application (Android) (2015)"
+      }
+    ],
+    "conferences": [
+      {
+        "date": "30/04/2019",
+        "title": "QubIT'19 – Informatics Forum",
+        "organization": "Degree in Informatics of the School of Management and Technology of the Polytechnic Institute of Santarém"
+      },
+      {
+        "date": "21/01/2016",
+        "title": "CIBE Security, Criminal Investigation and Computer Expertise",
+        "details": "Integrated in the conference cycle 'In conversation with science'"
+      }
+    ],
+    "eventOrganization": {
+      "paulaCulturalCenter": [
+        "2022 - Annual Party",
+        "2022 - Old Fashioned Fair 2022",
+        "2021 - 41st Anniversary of the Paúla Cultural Center",
+        "2018 - 40th Anniversary of the Cultural Center of Paúla",
+        "2018 - Annual Party",
+        "2013 - Annual Party",
+        "2013 - 2nd Serra de Ota Bearing Car Grand Prix",
+        "2012 - 34th Anniversary of the Centro Cultural de Paúla",
+        "2012 - Annual Party",
+        "2011 - 1st Serra de Ota Bearing Car Grand Prix",
+        "2010 - Annual Party"
+      ],
+      "other": [
+        "2015 - Element of the Organization of the Municipal Championship of Rolling Carts of Alenquer"
+      ]
+    },
+    "hobbies": "2009 - 2015 Shotokan Karate Practice (brown belt 2nd Kyu, Amicale Karate - Portugal Martial Arts)"
+  }
+}
