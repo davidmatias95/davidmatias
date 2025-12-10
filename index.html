@@ -92,13 +92,18 @@
 
         </ul>
 
+        <div class="separator"></div>
+
+        <div class="language-switcher-sidebar">
+          <button id="lang-toggle" class="lang-btn-sidebar" title="Toggle Language">
+            <ion-icon name="language-outline"></ion-icon>
+            <span id="lang-display-sidebar">EN</span>
+          </button>
+        </div>
+
       </div>
 
     </aside>
-
-
-
-
 
     <!--
       - #main-content
@@ -505,26 +510,58 @@
   <script src="./assets/js/script.js"></script>
 
   <!--
+    - translations
+  -->
+  <script src="./assets/js/translations.js"></script>
+
+  <!--
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
   <script>
+    // Variables globais
+    let jsonData = null;
+    let translationsData = null;
+    let currentLanguage = 'en';
+
     // Carrega os dados do JSON
-    fetch('./assets/data.json')
-      .then(response => response.json())
-      .then(data => {
+    Promise.all([
+      fetch('./assets/data/EN.json').then(r => r.json()),
+      fetch('./assets/data/PT.json').then(r => r.json())
+    ])
+    .then(([dataEN, dataPT]) => {
+      // Store both language data
+      const allData = {
+        en: dataEN,
+        pt: dataPT
+      };
+      
+      // Load saved language preference
+      const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+      currentLanguage = savedLang;
+      jsonData = savedLang === 'pt' ? dataPT : dataEN;
+      translationsData = { education: {}, experience: {}, additional: {} }; // Fallback
+      
         // Atualiza informações pessoais
-        document.getElementById('avatar').src = data.personalInfo.avatar;
-        document.getElementById('name').textContent = data.personalInfo.name;
-        document.getElementById('title').textContent = data.personalInfo.title;
-        document.getElementById('location').textContent = data.personalInfo.location;
+        document.getElementById('avatar').src = jsonData.personalInfo.avatar;
+        document.getElementById('name').textContent = jsonData.personalInfo.name;
+        
+        // Handle title (string now)
+        document.getElementById('title').textContent = jsonData.personalInfo.title;
+        
+        // Handle location (string now)
+        document.getElementById('location').textContent = jsonData.personalInfo.location;
 
         // Atualiza "About" - paragrafos
         const aboutContent = document.getElementById('about-content');
         aboutContent.innerHTML = '';
-        data.about.forEach(text => {
+        
+        // Handle about (array now)
+        const aboutTexts = jsonData.about;
+        
+        aboutTexts.forEach(text => {
           const p = document.createElement('p');
           p.textContent = text;
           aboutContent.appendChild(p);
@@ -533,7 +570,7 @@
         // Atualiza tecnologias
         const technologiesList = document.getElementById('technologies-list');
         technologiesList.innerHTML = '';
-        data.technologies.forEach(tech => {
+        jsonData.technologies.forEach(tech => {
           const li = document.createElement('li');
           li.className = 'clients-item';
           li.innerHTML = `<a href="${tech.url}"><img src="${tech.logo}" alt="${tech.name}"></a>`;
@@ -543,7 +580,7 @@
         // Atualiza Education
         const educationList = document.getElementById('education-list');
         educationList.innerHTML = '';
-        data.education.forEach(edu => {
+        jsonData.education.forEach(edu => {
           const li = document.createElement('li');
           li.className = 'timeline-item';
           let html = `
@@ -567,7 +604,7 @@
         // Atualiza Experience
         const experienceList = document.getElementById('experience-list');
         experienceList.innerHTML = '';
-        data.experience.forEach(exp => {
+        jsonData.experience.forEach(exp => {
           const li = document.createElement('li');
           li.className = 'timeline-item';
           let html = `
@@ -597,10 +634,10 @@
         languagesList.innerHTML += `
           <li class="timeline-item">
             <h4 class="h4 timeline-item-title">Mother Tongue</h4>
-            <p class="timeline-text">${data.skills.languages.motherTongue}</p>
+            <p class="timeline-text">${jsonData.skills.languages.motherTongue}</p>
           </li>
         `;
-        data.skills.languages.foreign.forEach(lang => {
+        jsonData.skills.languages.foreign.forEach(lang => {
           const li = document.createElement('li');
           li.className = 'timeline-item';
           li.innerHTML = `
@@ -613,7 +650,7 @@
         // Digital Skills
         const digitalList = document.getElementById('digital-list');
         digitalList.innerHTML = '';
-        data.skills.digital.forEach(skill => {
+        jsonData.skills.digital.forEach(skill => {
           const li = document.createElement('li');
           li.className = 'timeline-item';
           li.innerHTML = `<p class="timeline-text">${skill}</p>`;
@@ -621,23 +658,23 @@
         });
 
         // Add Communication & Organizational Skills as separate items
-        if (data.skills.communication) {
+        if (jsonData.skills.communication) {
           const commLi = document.createElement('li');
           commLi.className = 'timeline-item';
-          commLi.innerHTML = `<p class="timeline-text"><strong>Communication:</strong> ${data.skills.communication}</p>`;
+          commLi.innerHTML = `<p class="timeline-text"><strong>Communication:</strong> ${jsonData.skills.communication}</p>`;
           digitalList.appendChild(commLi);
         }
-        if (data.skills.organizational) {
+        if (jsonData.skills.organizational) {
           const orgLi = document.createElement('li');
           orgLi.className = 'timeline-item';
-          orgLi.innerHTML = `<p class="timeline-text"><strong>Organizational:</strong> ${data.skills.organizational}</p>`;
+          orgLi.innerHTML = `<p class="timeline-text"><strong>Organizational:</strong> ${jsonData.skills.organizational}</p>`;
           digitalList.appendChild(orgLi);
         }
 
         // Programming Languages
         const programmingList = document.getElementById('programming-list');
         programmingList.innerHTML = '';
-        data.skills.programming.forEach(lang => {
+        jsonData.skills.programming.forEach(lang => {
           const li = document.createElement('li');
           li.className = 'timeline-item';
           li.innerHTML = `<p class="timeline-text">${lang}</p>`;
@@ -647,7 +684,7 @@
         // Databases
         const databasesList = document.getElementById('databases-list');
         databasesList.innerHTML = '';
-        data.skills.databases.forEach(db => {
+        jsonData.skills.databases.forEach(db => {
           const li = document.createElement('li');
           li.className = 'timeline-item';
           li.innerHTML = `<p class="timeline-text">${db}</p>`;
@@ -657,7 +694,7 @@
         // Other Skills
         const otherList = document.getElementById('other-list');
         otherList.innerHTML = '';
-        data.skills.other.forEach(skill => {
+        jsonData.skills.other.forEach(skill => {
           const li = document.createElement('li');
           li.className = 'timeline-item';
           li.innerHTML = `<p class="timeline-text">${skill}</p>`;
@@ -667,7 +704,7 @@
         // Atualiza Additional - Projects
         const projectsList = document.getElementById('projects-list');
         projectsList.innerHTML = '';
-        data.additional.projects.forEach(project => {
+        jsonData.additional.projects.forEach(project => {
           const li = document.createElement('li');
           li.className = 'timeline-item';
           li.innerHTML = `
@@ -680,7 +717,7 @@
         // Conferences
         const conferencesList = document.getElementById('conferences-list');
         conferencesList.innerHTML = '';
-        data.additional.conferences.forEach(conf => {
+        jsonData.additional.conferences.forEach(conf => {
           const li = document.createElement('li');
           li.className = 'timeline-item';
           li.innerHTML = `
@@ -692,18 +729,295 @@
         });
 
         // Hobbies - include driving license and event organization
-        let hobbiesText = data.additional.hobbies || '';
-        if (data.additional.drivingLicense) {
-          hobbiesText += `<br><strong>Driving License:</strong> ${data.additional.drivingLicense}`;
+        let hobbiesText = jsonData.additional.hobbies || '';
+        if (jsonData.additional.drivingLicense) {
+          hobbiesText += `<br><strong>Driving License:</strong> ${jsonData.additional.drivingLicense}`;
         }
-        if (data.additional.eventOrganization && data.additional.eventOrganization.paulaCulturalCenter) {
-          hobbiesText += `<br><strong>Event Organization:</strong> ${data.additional.eventOrganization.paulaCulturalCenter.slice(0, 2).join(', ')}...`;
+        if (jsonData.additional.eventOrganization && jsonData.additional.eventOrganization.paulaCulturalCenter) {
+          hobbiesText += `<br><strong>Event Organization:</strong> ${jsonData.additional.eventOrganization.paulaCulturalCenter.slice(0, 2).join(', ')}...`;
         }
         document.getElementById('hobbies-text').innerHTML = hobbiesText;
-
-        console.log('Dados carregados com sucesso:', data);
       })
-      .catch(error => console.error('Erro ao carregar o JSON:', error));
+      .then(() => {
+        // Language Toggle Functionality
+        const langToggle = document.getElementById('lang-toggle');
+        const langDisplay = document.getElementById('lang-display-sidebar');
+
+        // Update language display on page load
+        langDisplay.textContent = currentLanguage.toUpperCase();
+
+        langToggle.addEventListener('click', () => {
+          currentLanguage = currentLanguage === 'en' ? 'pt' : 'en';
+          langDisplay.textContent = currentLanguage.toUpperCase();
+          updatePageLanguage(currentLanguage);
+          localStorage.setItem('preferredLanguage', currentLanguage);
+        });
+
+        // If not English, update the page with the saved language
+        if (currentLanguage !== 'en') {
+          updatePageLanguage(currentLanguage);
+        }
+
+    function updatePageLanguage(lang) {
+      // Update navbar buttons
+      const navButtons = document.querySelectorAll('.navbar-link');
+      const navLabels = [t('about', lang), t('resume', lang), t('skills', lang), t('additional', lang)];
+      navButtons.forEach((btn, idx) => {
+        btn.textContent = navLabels[idx];
+      });
+
+      // Update article titles
+      document.querySelector('[data-page="about"] .article-title').textContent = t('aboutMe', lang);
+      document.querySelector('[data-page="resume"] .article-title').textContent = t('resume', lang);
+      document.querySelector('[data-page="skills"] .article-title').textContent = t('skillsTitle', lang);
+      document.querySelector('[data-page="additional"] .article-title').textContent = t('additionalTitle', lang);
+
+      // Update section titles
+      updateSectionTitles(lang);
+
+      // Update personal info (now simple strings)
+      document.getElementById('title').textContent = jsonData.personalInfo.title;
+      document.getElementById('location').textContent = jsonData.personalInfo.location;
+
+      // Update about content (now simple array)
+      const aboutContent = document.getElementById('about-content');
+      aboutContent.innerHTML = '';
+      const aboutData = jsonData.about;
+      
+      if (aboutData && Array.isArray(aboutData)) {
+        aboutData.forEach(text => {
+          const p = document.createElement('p');
+          p.textContent = text;
+          aboutContent.appendChild(p);
+        });
+      }
+
+      // Reload all dynamic content with translated data
+      reloadDynamicContent(lang);
+    }
+
+    function reloadDynamicContent(lang) {
+      // Load the appropriate language data
+      let data;
+      if (lang === 'pt') {
+        // allData already loaded, use PT version
+        fetch('./assets/data/PT.json').then(r => r.json()).then(dataPT => {
+          jsonData = dataPT;
+          updateContent(dataPT, lang);
+        });
+      } else {
+        // Use EN version
+        fetch('./assets/data/EN.json').then(r => r.json()).then(dataEN => {
+          jsonData = dataEN;
+          updateContent(dataEN, lang);
+        });
+      }
+    }
+
+    function updateContent(data, lang) {
+      // Use education from loaded data
+      let educationData = data.education;
+
+      const educationList = document.getElementById('education-list');
+      educationList.innerHTML = '';
+      educationData.forEach(edu => {
+        const li = document.createElement('li');
+        li.className = 'timeline-item';
+        let html = `
+          <h4 class="h4 timeline-item-title">${edu.degree}</h4>
+          <span>${edu.period}</span>
+          <p class="timeline-text">${edu.institution}</p>
+        `;
+        if (edu.level) {
+          html += `<p class="timeline-text"><strong>${t('level', lang)}:</strong> ${edu.level}</p>`;
+        }
+        if (edu.curriculumUnits && edu.curriculumUnits.length > 0) {
+          html += `<p class="timeline-text"><strong>${t('curriculumUnits', lang)}:</strong> ${edu.curriculumUnits.slice(0, 3).join(', ')}...</p>`;
+        }
+        if (edu.professionalTest) {
+          html += `<p class="timeline-text"><strong>${t('professionalTest', lang)}:</strong> ${edu.professionalTest}</p>`;
+        }
+        li.innerHTML = html;
+        educationList.appendChild(li);
+      });
+
+      // Use experience from loaded data
+      let experienceData = data.experience;
+
+      const experienceList = document.getElementById('experience-list');
+      experienceList.innerHTML = '';
+      experienceData.forEach(exp => {
+        const li = document.createElement('li');
+        li.className = 'timeline-item';
+        let html = `
+          <h4 class="h4 timeline-item-title">${exp.position}</h4>
+          <span>${exp.period}</span>
+          <p class="timeline-text"><strong>${exp.company}</strong></p>
+        `;
+        if (exp.description) {
+          html += `<p class="timeline-text">${exp.description}</p>`;
+        }
+        if (exp.technologies) {
+          html += `<p class="timeline-text"><strong>${t('technologies', lang)}:</strong> ${exp.technologies}</p>`;
+        }
+        if (exp.projects && exp.projects.length > 0) {
+          html += `<p class="timeline-text"><strong>${t('keyProjects', lang)}:</strong> ${exp.projects.slice(0, 2).join(', ')}</p>`;
+        }
+        if (exp.certifications && exp.certifications.length > 0) {
+          html += `<p class="timeline-text"><strong>${t('certifications', lang)}:</strong> ${exp.certifications.slice(0, 2).join(', ')}</p>`;
+        }
+        li.innerHTML = html;
+        experienceList.appendChild(li);
+      });
+
+      // Update Additional content
+      let additionalData = data.additional;
+
+      const projectsList = document.getElementById('projects-list');
+      projectsList.innerHTML = '';
+      additionalData.projects.forEach(project => {
+        const li = document.createElement('li');
+        li.className = 'timeline-item';
+        li.innerHTML = `
+          <h4 class="h4 timeline-item-title">${project.name}</h4>
+          <p class="timeline-text">${project.description}</p>
+        `;
+        projectsList.appendChild(li);
+      });
+
+      const conferencesList = document.getElementById('conferences-list');
+      conferencesList.innerHTML = '';
+      additionalData.conferences.forEach(conf => {
+        const li = document.createElement('li');
+        li.className = 'timeline-item';
+        li.innerHTML = `
+          <h4 class="h4 timeline-item-title">${conf.title}</h4>
+          <span>${conf.date}</span>
+          <p class="timeline-text">${conf.organization || conf.details || ''}</p>
+        `;
+        conferencesList.appendChild(li);
+      });
+
+      // Update Hobbies
+      let hobbiesText = additionalData.hobbies || '';
+      if (additionalData.drivingLicense) {
+        hobbiesText += `<br><strong>${t('drivingLicense', lang)}:</strong> ${additionalData.drivingLicense}`;
+      }
+      if (additionalData.eventOrganization) {
+        hobbiesText += `<br><strong>${t('eventOrganization', lang)}:</strong> ${additionalData.eventOrganization.paulaCulturalCenter ? additionalData.eventOrganization.paulaCulturalCenter.slice(0, 2).join(', ') + '...' : ''}`;
+      }
+      document.getElementById('hobbies-text').innerHTML = hobbiesText;
+
+      // Update Skills - Languages
+      const languagesList = document.getElementById('languages-list');
+      languagesList.innerHTML = '';
+      languagesList.innerHTML += `
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">Mother Tongue</h4>
+          <p class="timeline-text">${data.skills.languages.motherTongue}</p>
+        </li>
+      `;
+      data.skills.languages.foreign.forEach(lang => {
+        const li = document.createElement('li');
+        li.className = 'timeline-item';
+        li.innerHTML = `
+          <h4 class="h4 timeline-item-title">${lang.language}</h4>
+          <p class="timeline-text">Listening: ${lang.listening} | Reading: ${lang.reading} | Speaking: ${lang.speaking} | Writing: ${lang.writing}</p>
+        `;
+        languagesList.appendChild(li);
+      });
+
+      // Digital Skills
+      const digitalList = document.getElementById('digital-list');
+      digitalList.innerHTML = '';
+      data.skills.digital.forEach(skill => {
+        const li = document.createElement('li');
+        li.className = 'timeline-item';
+        li.innerHTML = `<p class="timeline-text">${skill}</p>`;
+        digitalList.appendChild(li);
+      });
+
+      // Add Communication & Organizational Skills as separate items
+      if (data.skills.communication) {
+        const commLi = document.createElement('li');
+        commLi.className = 'timeline-item';
+        commLi.innerHTML = `<p class="timeline-text"><strong>Communication:</strong> ${data.skills.communication}</p>`;
+        digitalList.appendChild(commLi);
+      }
+      if (data.skills.organizational) {
+        const orgLi = document.createElement('li');
+        orgLi.className = 'timeline-item';
+        orgLi.innerHTML = `<p class="timeline-text"><strong>Organizational:</strong> ${data.skills.organizational}</p>`;
+        digitalList.appendChild(orgLi);
+      }
+
+      // Programming Languages
+      const programmingList = document.getElementById('programming-list');
+      programmingList.innerHTML = '';
+      data.skills.programming.forEach(lang => {
+        const li = document.createElement('li');
+        li.className = 'timeline-item';
+        li.innerHTML = `<p class="timeline-text">${lang}</p>`;
+        programmingList.appendChild(li);
+      });
+
+      // Databases
+      const databasesList = document.getElementById('databases-list');
+      databasesList.innerHTML = '';
+      data.skills.databases.forEach(db => {
+        const li = document.createElement('li');
+        li.className = 'timeline-item';
+        li.innerHTML = `<p class="timeline-text">${db}</p>`;
+        databasesList.appendChild(li);
+      });
+
+      // Other Skills
+      const otherList = document.getElementById('other-list');
+      otherList.innerHTML = '';
+      data.skills.other.forEach(skill => {
+        const li = document.createElement('li');
+        li.className = 'timeline-item';
+        li.innerHTML = `<p class="timeline-text">${skill}</p>`;
+        otherList.appendChild(li);
+      });
+    }
+
+    function updateSectionTitles(lang) {
+      const sectionMap = {
+        'experience-section': t('experience', lang),
+        'education-section': t('education', lang),
+        'languages-section': t('languages', lang),
+        'digital-section': t('digitalSkills', lang),
+        'programming-section': t('programmingLanguages', lang),
+        'databases-section': t('databases', lang),
+        'other-section': t('otherSkills', lang),
+        'projects-section': t('projects', lang),
+        'conferences-section': t('conferences', lang),
+        'hobbies-section': t('hobbiesEvents', lang)
+      };
+
+      Object.keys(sectionMap).forEach(sectionId => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const h3 = element.querySelector('.h3');
+          if (h3) h3.textContent = sectionMap[sectionId];
+        }
+      });
+
+      // Update Technology title
+      const clientsTitle = document.querySelector('.clients-title');
+      if (clientsTitle) clientsTitle.textContent = t('technology', lang);
+    }
+
+        // Update language display
+        langDisplay.textContent = currentLanguage.toUpperCase();
+        
+        // Update page with current language
+        if (currentLanguage === 'pt') {
+          updatePageLanguage(currentLanguage);
+        }
+      })
+      .catch(error => console.error('Erro ao carregar os dados:', error));
   </script>
 
 </body>

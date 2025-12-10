@@ -1,0 +1,335 @@
+{
+  "personalInfo": {
+    "name": "David Matias",
+    "title": "Desenvolvedor OutSystems",
+    "avatar": "/assets/images/avatar.jpg",
+    "location": "Alenquer, Lisboa, Portugal"
+  },
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/davidmatias95/"
+  },
+  "about": [
+    "Sou um Desenvolvedor OutSystems e Desenvolvedor Full Stack de Alenquer, Portugal, especializado em desenvolvimento web e integração de sistemas. Sou excelente na transformação de requisitos complexos em aplicações eficientes, simplificadas e fáceis de usar.",
+    "O meu trabalho é desenvolver aplicações web robustas e escaláveis que não sejam apenas funcionais e eficientes, mas também intuitivas e visualmente atraentes. Adiciono um toque pessoal a cada projeto, garantindo que seja destaque e fácil de usar. O meu objetivo é transmitir a sua mensagem e identidade da forma mais eficaz e criativa possível.",
+    "Desenvolvi soluções para várias empresas, aproveitando um conjunto de tecnologias para atender às suas necessidades específicas."
+  ],
+  "technologies": [
+    {
+      "name": "OutSystems",
+      "logo": "https://www.outsystems.com/-/media/themes/outsystems/website/site-theme/imgs/logo.svg?updated=20211217193441",
+      "url": "#"
+    },
+    {
+      "name": "SQL",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sql_data_base_with_logo.png/800px-Sql_data_base_with_logo.png",
+      "url": "#"
+    },
+    {
+      "name": "Laravel",
+      "logo": "https://laravel.com/img/logomark.min.svg",
+      "url": "#"
+    },
+    {
+      "name": "PHP",
+      "logo": "https://www.php.net/images/logos/php-logo.svg",
+      "url": "#"
+    },
+    {
+      "name": "JavaScript",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+      "url": "#"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Mestrado em Engenharia de Sistemas e Tecnologias Web",
+      "period": "2020 – 2022",
+      "institution": "ISLA - Instituto Superior de Gestão e Administração de Santarém, Portugal",
+      "level": "Nível 7 QRQ",
+      "curriculumUnits": [
+        "Design de Interação",
+        "Extração de Conhecimento de Dados",
+        "Planeamento e Desenvolvimento de Sistemas de Informação",
+        "Programação Web",
+        "Segurança Informática",
+        "Cloud Computing",
+        "Desenvolvimento de Aplicações Móveis",
+        "Inteligência Artificial",
+        "Metodologias de Pesquisa",
+        "Programação Web Avançada"
+      ]
+    },
+    {
+      "degree": "Licenciatura em Ciência da Computação",
+      "period": "2017 – 2020",
+      "institution": "Escola Superior de Gestão e Tecnologia de Santarém, Instituto Politécnico Santarém, Portugal",
+      "level": "Nível 6 QRQ",
+      "curriculumUnits": [
+        "Cálculo",
+        "Contabilidade Empresarial",
+        "Finanças",
+        "Matemática Discreta",
+        "Direito e Ética da Sociedade da Informação",
+        "Marketing para Tecnologias",
+        "Negócio Eletrónico",
+        "Probabilidades e Estatística",
+        "Análise e Desenho de Sistemas de Informação",
+        "Arquitetura de Computadores e Sistemas Operativos",
+        "Bases de Dados I",
+        "Bases de Dados II",
+        "Fundamentos de Programação",
+        "Linguagens de Programação",
+        "Programação Orientada a Objetos",
+        "Redes de Computadores",
+        "Serviços de Rede",
+        "Sistemas Multimédia",
+        "Sistemas Web",
+        "Administração e Segurança de Sistemas e Redes",
+        "Aplicações Open Source",
+        "Aplicações Multimédia",
+        "Desenvolvimento de Aplicações Internet",
+        "Desenvolvimento Móvel",
+        "Gestão de Projetos",
+        "Integração de Sistemas I",
+        "Integração de Sistemas II",
+        "Design Aplicado",
+        "Sistemas de Informação para Gestão",
+        "Tecnologias Internet"
+      ]
+    },
+    {
+      "degree": "Boot Camp - Desenvolvimento de Aplicações Web OutSystems",
+      "period": "15-18 Abril, 2019",
+      "institution": "Do It Lean - Escola Superior de Gestão e Tecnologia de Santarém, Instituto Politécnico Santarém, Portugal"
+    },
+    {
+      "degree": "Técnico Superior Profissional em Tecnologias de Sistemas de Informação e Programação",
+      "period": "2015 – 2017",
+      "institution": "Escola Superior de Gestão e Tecnologia de Santarém, Instituto Politécnico Santarém, Portugal",
+      "level": "Nível 5 QRQ",
+      "curriculumUnits": [
+        "Língua Inglesa",
+        "Língua Portuguesa",
+        "Métodos Quantitativos",
+        "Arquitetura de Hardware e Sistemas Operativos",
+        "Base de Dados I",
+        "Desenvolvimento de Produtos Multimédia",
+        "Engenharia de Software",
+        "Introdução à Programação",
+        "Programação Orientada a Objetos",
+        "Redes de Comunicação e Serviços",
+        "Segurança de Redes e Sistemas",
+        "Sistemas de Informação",
+        "Base de Dados II",
+        "Formação em Contexto de Trabalho (750 horas)",
+        "Integração de Sistemas",
+        "Programação Móvel",
+        "Programação WEB",
+        "Projeto de Tecnologias de Sistemas de Informação e Programação",
+        "Segurança de Redes e Sistemas",
+        "Sistemas de Informação para Gestão"
+      ]
+    },
+    {
+      "degree": "Técnico Profissional em Gestão e Programação de Sistemas Informáticos",
+      "period": "2012 – 2015",
+      "institution": "Escola Secundária Damião de Goes, Lisboa, Portugal",
+      "level": "Nível 4 QRQ",
+      "curriculumUnits": [
+        "Área de Integração",
+        "Educação Física",
+        "Física e Química",
+        "Língua Inglesa",
+        "Matemática",
+        "Português",
+        "Tecnologias da Informação e Comunicação",
+        "Arquitetura de Computadores",
+        "Formação em Contexto de Trabalho (420 horas)",
+        "Programação e Sistemas de Informação",
+        "Redes de Comunicação",
+        "Sistemas Operativos"
+      ],
+      "professionalTest": "Aplicação WEB 'CCCR-Alenquer' - Aplicação desenvolvida para apoiar a gestão do Campeonato Municipal de Carros de Rolamentos de Alenquer"
+    }
+  ],
+  "experience": [
+    {
+      "position": "Desenvolvedor OutSystems",
+      "period": "01/09/2021 – Presente",
+      "company": "Valantic LCS (antigo Do iT Lean)",
+      "address": "Rua General Ferreira Martins 10, 9B 1495-137 Algés Lisboa (Portugal)",
+      "website": "https://valantic.com/en/low-code/",
+      "description": "Desenvolvimento de aplicações empresariais usando a plataforma OutSystems.",
+      "projects": [
+        "Desenvolvimento de uma aplicação de gestão de ideias para lidar com propostas",
+        "Migração de uma aplicação Trading Game Cards de tradicional para reativa",
+        "Manutenção de uma aplicação de gestão de distribuição de merchandising",
+        "Desenvolvimento de um projeto interno para gestão de projetos"
+      ],
+      "certifications": [
+        "Associate Reactive Developer (O11)",
+        "Associate Traditional Web Developer (O11)",
+        "Associate Developer (ODC)",
+        "Architecture Specialist (O11)"
+      ],
+      "technologies": "OutSystems, Jira, C#, JavaScript, SQL, CSS, REST API, JSON",
+      "sector": "Atividades de Programação Informática"
+    },
+    {
+      "position": "Desenvolvedor Backend",
+      "period": "01/08/2020 – 01/08/2021",
+      "company": "Margem Inquestionável, S.A (Digital Manager Guru)",
+      "address": "Largo do Infante Santo 2005-246 Santarém (Portugal)",
+      "website": "https://digitalmanager.guru/",
+      "description": "Responsável pela integração e desenvolvimento de APIs com aplicações externas e internas num ambiente de startup.",
+      "technologies": "Laravel, MySQL, JSON",
+      "sector": "Atividades de Programação Informática"
+    },
+    {
+      "position": "Desenvolvedor Full Stack",
+      "period": "01/10/2019 – 30/06/2020",
+      "company": "Capensis, Lda",
+      "address": "Estrada Nacional 1, km 33, Edifício Ativo, Sala 108 - Casal Machado - Alenquer, 2580-364 Lisboa (Portugal)",
+      "website": "https://capensis.pt/",
+      "description": "Estágio Profissional através do IEFP (9 meses). Planeamento, implementação, configuração, manutenção e parametrização de sistemas de informação empresariais.",
+      "activities": [
+        "Desenvolvimento Full Stack",
+        "Administração de Tecnologia de Informação"
+      ],
+      "software": "Sage 50c/Retail, Filosoft, Zonesoft, Microsoft Office 365",
+      "technologies": "HTML5, CSS3, PHP, JavaScript, jQuery, MySQL, Bootstrap, SQL Server",
+      "sector": "Consultoria Informática"
+    },
+    {
+      "position": "Desenvolvedor Full Stack",
+      "period": "05/06/2019 – 09/08/2019",
+      "company": "Capensis, Lda",
+      "address": "Estrada Nacional 1, km 33, Edifício Ativo, Sala 108 - Casal Machado - Alenquer, 2580-364 Lisboa (Portugal)",
+      "website": "https://capensis.pt/",
+      "description": "Formação em Contexto de Trabalho (760 horas) do Curso TeSP em Tecnologias de Sistemas de Informação e Programação. Desenvolvimento de um Sistema de Informação para apoiar atividades administrativas e de gestão.",
+      "technologies": "HTML5, CSS3, PHP, JavaScript, jQuery, MySQL, Bootstrap",
+      "sector": "Consultoria Informática"
+    },
+    {
+      "position": "Desenvolvedor Full Stack",
+      "period": "20/02/2017 – 14/07/2017",
+      "company": "Paulo A. R. Nunes, Lda",
+      "address": "Rua do Bairro Novo - Porto da Luz - Alenquer, 2580-383 Lisboa (Portugal)",
+      "description": "Formação em Contexto de Trabalho (760 horas) do Curso TeSP em Tecnologias de Sistemas de Informação e Programação. Desenvolvimento de um Sistema de Informação para apoiar atividades administrativas e de gestão do negócio de instalações elétricas da empresa.",
+      "technologies": "HTML5, CSS3, PHP, JavaScript, jQuery, MySQL, Bootstrap",
+      "sector": "Instalações Elétricas"
+    },
+    {
+      "position": "Desenvolvedor Full Stack (Trabalho de Verão)",
+      "period": "10/07/2016 – 13/09/2016",
+      "company": "Paulo A. R. Nunes, Lda",
+      "address": "Rua do Bairro Novo - Porto da Luz - Alenquer, 2580-383 Lisboa (Portugal)",
+      "description": "Desenvolvimento de uma aplicação web para gestão de stocks, registando a entrada e saída de materiais utilizados na obra.",
+      "technologies": "HTML, CSS, PHP, JavaScript, MySQL, Bootstrap",
+      "sector": "Instalações Elétricas"
+    },
+    {
+      "position": "Desenvolvedor Full Stack (Estágio)",
+      "period": "16/03/2015 – 30/06/2015",
+      "company": "Somaquifer, Lda",
+      "address": "Loteamento Industrial Outeirinho Casal Fontinha, Lote 2, 2005-544 Santarém (Portugal)",
+      "website": "http://somaquifer.pt/",
+      "description": "Formação em Contexto de Trabalho (420 horas) do Curso Profissional Técnico em Gestão e Programação de Sistemas Informáticos. Desenvolveu o site principal da empresa SOMAQUIFER.",
+      "technologies": "HTML, CSS, PHP, MySQL",
+      "sector": "Comércio de Máquinas e Ferramentas Industriais"
+    }
+  ],
+  "skills": {
+    "languages": {
+      "motherTongue": "Português",
+      "foreign": [
+        {
+          "language": "Inglês",
+          "listening": "B1",
+          "reading": "B1",
+          "oralInteraction": "B1",
+          "speaking": "B1",
+          "writing": "A2"
+        }
+      ]
+    },
+    "communication": "Boas capacidades de comunicação e espírito de equipa adquiridas através de vários eventos como elemento da organização do Centro Cultural de Paúla e do Campeonato Municipal de Carros de Rolamentos de Alenquer",
+    "organizational": "Capacidade organizativa adquirida através da participação nas edições da Grande Prix de Carros de Rolamentos da Serra de Ota e Campeonato Municipal de Carros de Rolamentos de Alenquer",
+    "digital": [
+      "Conhecimento em Engenharia de Software",
+      "Conhecimento de arquiteturas de desenvolvimento de software e padrões para aplicações Web e dispositivos móveis",
+      "Domínio de linguagens e Frameworks para desenvolvimento de aplicações Web (HTML5, CSS, JavaScript, Bootstrap, PHP)",
+      "Bom domínio na especificação de Base de Dados e Sistemas de Gestão de Base de Dados",
+      "Conhecimento em controle de versão e criação colaborativa/distribuída"
+    ],
+    "programming": [
+      "PHP",
+      "JAVA",
+      "JavaScript",
+      "C#",
+      "VB",
+      "PL/SQL"
+    ],
+    "databases": [
+      "SQL Server",
+      "MySQL",
+      "SQLite"
+    ],
+    "other": [
+      "HTML5",
+      "jQuery",
+      "SQL",
+      "CSS3",
+      "JSON",
+      "XML"
+    ]
+  },
+  "additional": {
+    "drivingLicense": "B1, B",
+    "projects": [
+      {
+        "name": "Loucos do Asfalto",
+        "description": "Equipa familiar de carros de rolamentos (desde 2009)"
+      },
+      {
+        "name": "CRTempos",
+        "description": "Sistema de Cronometragem - Aplicação web (2018)"
+      },
+      {
+        "name": "CCCR-Alenquer",
+        "description": "Sistema de Gestão do Campeonato Municipal de Carros de Rolamentos de Alenquer - Aplicação Web e Móvel (Android) (2015)"
+      }
+    ],
+    "conferences": [
+      {
+        "date": "30/04/2019",
+        "title": "QubIT'19 – Fórum de Informática",
+        "organization": "Licenciatura em Informática da Escola Superior de Gestão e Tecnologia do Instituto Politécnico de Santarém"
+      },
+      {
+        "date": "21/01/2016",
+        "title": "CIBE Segurança, Investigação Criminal e Perícia Informática",
+        "details": "Integrado no ciclo de conferências 'Em conversa com a ciência'"
+      }
+    ],
+    "eventOrganization": {
+      "paulaCulturalCenter": [
+        "2022 - Festa Anual",
+        "2022 - Feira da Antiguidade 2022",
+        "2021 - 41º Aniversário do Centro Cultural de Paúla",
+        "2018 - 40º Aniversário do Centro Cultural de Paúla",
+        "2018 - Festa Anual",
+        "2013 - Festa Anual",
+        "2013 - 2ª Grande Prix de Carros de Rolamentos da Serra de Ota",
+        "2012 - 34º Aniversário do Centro Cultural de Paúla",
+        "2012 - Festa Anual",
+        "2011 - 1ª Grande Prix de Carros de Rolamentos da Serra de Ota",
+        "2010 - Festa Anual"
+      ],
+      "other": [
+        "2015 - Elemento da Organização do Campeonato Municipal de Carros de Rolamentos de Alenquer"
+      ]
+    },
+    "hobbies": "2009 - 2015 Prática de Karate Shotokan (faixa castanha 2º Kyu, Amicale Karate - Artes Marciais Portugal)"
+  }
+}
