@@ -153,6 +153,19 @@
     }
   ],
   "experience": [
+      {
+      "position": "OutSystems Developer",
+      "period": "27/07/2026 – Present",
+      "company": "Ruption, Lda.",
+      "address": "Rua Professor Henrique de Barros, No. 4, 4C 2685-339 Prior Velho, Lisbon (Portugal)",
+      "website": "https://www.ruption.pt/",
+      "description": "Development of enterprise applications using the OutSystems platform.",
+      "projects": [
+        "Development and maintenance of an insurance management platform for an international company using OutSystems ODC. Responsible for implementing new features, integrating through REST APIs, and supporting a multi-tenant, multilingual architecture. Involved in technical analysis, solution design, performance optimization, and collaboration with multidisciplinary teams in an Agile environment."
+      ],
+      "technologies": "OutSystems, Jira, C#, JavaScript, SQL, CSS, REST API, JSON",
+      "sector": "Computer Programming Activities"
+    },
     {
       "position": "OutSystems Developer",
       "period": "01/09/2021 – 30/04/2026",
